@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<a href="/">Main Page</a>
+<br>
+<a href="/task_4">Task 4</a>
+<br>
+<br>
+<body>
+Task 3, part 1:
+<br>
+<br>
+For task 3, my project will try to make two comparisons: Sector & Dsitribution of PER & BV and Sector & Market Cap. The project will address the following questions:
+<br>
+What is the correlation between Total Market Capitalization of a sector and Sector Size(number of companies present in the sector)?
+<br>
+What is the distribution of PER and BV within each sector? Is there a sector-wise variation, or is the behaviour similar with respect to the two variables above?
+<br>
+<br>
+Part 1, was the attempt to answer these questions with unfiltered data (mixed sector bar chart below):
+<br>
+<img src="static/graphs/Task3_0_cat.jpeg" alt="ERROR"width="500"
+     height="400">
+<br>
+<br>
+By sector distribution of the bar chart above:
+<img src="static/graphs/Task3_0_cat_sect.jpeg" alt="ERROR"width="2000"
+     height="300">
+<br>
+<br>
+From the graphs it is visible that the extreme anomaly values present graphs which are difficult to analyse and draw conclusions from. Therefore, it was decided to use the filtered data for the same purpose.
+
+<br>
+<br>
+Task 3, part 1.1:
+<br>
+Histogram for all sectors (PER):
+<br>
+<img src="static/graphs/Task3_1_hist.jpeg" alt="ERROR"width="500"
+     height="300">
+<br>
+<br>
+From the histogram it can be hypothesized that some sectors will follow a normal distribution. Therefore, sector-wise histograms will be presented:
+<img src="static/graphs/Task3_1_hist_sect.jpeg" alt="ERROR"width="1700"
+     height="300">
+<br>
+<br>
+As hypothesized, all sectors besides the telecommunications, information technology and consumer staples follow a normal distribution. Whereas, the mean value for each sector is slightly different. Therefore, in choosing a stock market portfolio, my project will consider sector-wise PER.
+<br>
+<br>
+Histogram for all sectors (BV):
+<br>
+<img src="static/graphs/Task3_1_hist_BV_sect.jpeg" alt="ERROR"width="1700"
+     height="300">
+<br>
+<br>
+Nonetheless, from the BV it is visible that some sectors are skewed towards a higher BV. This suggests that for sectors such as 'Consumer Discretionary', higher BV companies can be considered.
+<br>
+<br>
+<br>
+<br>
+Task 3, part 2:
+<br>
+In this part, I will look at correlations between market cap and sector size.
+<br>
+<br>
+Market Capitalization Pie chart:
+<br>
+<img src="static/graphs/Task3_2_pie1.jpeg" alt="ERROR"width="1000"
+     height="1000">
+<br>
+Number of Companies Pie chart:
+<br>
+<img src="static/graphs/Task3_2_pie2.jpeg" alt="ERROR"width="1000"
+     height="1000">
+<br>
+<br>
+At first glance, there seems to be very little differences between the two pie charts. The most significant difference is for Information Technology sector. It's market is significantly larger than the proportion of companies present in the sector, this shows how much the U.S economy relies on IT based companies.
+<br>
+<br>
+It was decided to further investigate the correlation between variables:
+<br>
+{{corr3}}
+<br>
+The correlation coefficients show that there is not a perfectly linear trend between market cap and number of companies. However, an interesting correlation was draw from sector size and the Mean Price of the sector. Which suggests that large sectors attract more investments, driving up the price.
+<br>
+<br>
+I will now attempt to connect all the variables and draw some trends:
+<br>
+{{dq3}}
+<br>
+<br>
+It was decided to further investigate the correlation the rest of the variables:
+{{corr4}}
+<br>
+<br>
+This is the clustermap produced:
+<img src="static/graphs/Task3_cluster.jpeg" alt="ERROR"width="1000"
+     height="1000">
+<br>
+<br>
+Cluster map shows a connection between 'Materials' and 'Real Estate', which is a possible correlation. Another possible connection is between the industrial sector and the consumer staples, because the industrial sector usually produces products for the consumer staples sector. A more questionable relationship with no direct connect is between the 'Financial' and the 'Consumer Discretionary' sectors.
+</body>
+<br>
+<a href="/">Main Page</a>
+</html>

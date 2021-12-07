@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<a href="/">Main Page</a>
+<br>
+<a href="/task_6">Task 6*</a>
+<br>
+<body>
+<br>
+<br>
+In conclusion, my data analysis has provided a lot of key information about the S&P 500 companies. The main findings have been outlined as text throughout the project. In the final part of my report, this information will be summed up and analysed. Furthermore, important conclusions will be drawn on the technique to choose a stock portfolio.
+<br>
+<br>
+First and foremost, during Task 1, the descriptive statistics showed extreme-value anomalies within the data. The boxplots plotted further emphasized this trend within the data. Thereby, it was decided to create a filter(based on the IQR), through which my project removed 89 companies from the 504 data points. After passing on the data through the filter algorithms, the standard deviation was significantly reduced. The boxplots produced after data filtration process demonstrated that for all 4 parameters (BV, PER, EPR and PSR) the boxplots illustrated the information more adequetly. This suggests that the anomalous companies were anomalies for all (or most) of the parameters. This suggests a key insight about the data, when a companies is an outlier for one of the parameters, it is likely to be an outlier for all of its financial information. Furthermore, after filtration it was observed that the boxplot for BV has similar distribution to the boxplot for PSR, (and vice versa for the other two parameters) this allowed us to for two grouped boxplot representation. The similarity has also allowed the project to consider only one parameter from each group namely: BV & PER.
+<br>
+<br>
+During task 3(part 1) my project addressed the sector-wise variation within the data. The histograms plotted using seaborn module illustrated that indeed, there is a difference in the distribution for PER and BV depending on the sector in question. For PER most sectors follow a normal distribution and the mean PER varies slightly within each sector. On the other hand, sectors such as 'Telecommunications Services(TS)' and 'Information Technology(IT)' did not quite follow with the trend. However, an explanation can be drawn from Task 3, part 2. One of the reasons for which TS did not follow the trend could be that the sector only has 3 companies within itself. Thereby, due to such a small population within the sector, the trend did not properly form. My project will neglect this sector for the portfolio choosing, as no trend was drawn. Regarding the IT sector, more in depth analysis was required, which was fortunately provided by Task 2, part 3. In the pie chart it was clear that IT cumulative market cap is significantly larger than the number of companies present in the sector. This suggests that there are some very large companies present in the sector. Which could be an explanation for the skew in PER ratio. With respect to BV, the data showed that generally in each sector there is a skew due to the presence of some companies with higher BV. These trend in PER and BV will be kept in mind during the choosing of my portfolio.
+<br>
+<br>
+At the same time, during task 3(part 2) my project was initially addressing the behaviour of market cap with respect to sector size. However, due to important correlation findings this question was further developed to look for overall trends in the data. The results of this study can be considered 'questionable' or 'interesting' (depends how you look at the situation xD). At first, after plotting two pie charts (of data that you would usually expect to have linear correlation) my project has discovered that the IT sector takes up a larger proportion of the pie chart than in the sector-size pie chart. This demonstrates that the U.S economy relies heavily on its IT companies. Furthermore, after measuring the correlation it was discovered that the correlation is not perfectly linear, an unexpected result. This led the project onto a study of how mean price, PER, BV and other parameters correlate with the initial results. The cluster map produced as a result demonstrated on the one hand 'common sense' relationships within the data (like the similarity of the 'Materials', 'Real Estate' and 'Energy' sector), on the other a questionable relationship was posed between the 'Financial' and 'Consumer Discretionary' sectors. With my existing knowledge I do not see how these two sectors can be related to each other, therefore it is difficult to draw any conclusions from the cluster map. I will not use the results from this study in choosing the stock-market portfolio.
+<br>
+<br>
+Overall, I believe that some important conclusions can be drawn from the project, and the data analysis. most importantly, is that I successfully implemented Pandas library, Seaborn Library and Matplotlib in the successful data analysis methods. As a cherry on the pie I will do an extra task 5*, and complete the project by generating a stock market portfolio!
+</body>
+<br>
+<br>
+<a href="/">Main Page</a>
+</html>

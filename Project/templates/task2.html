@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<a href="/">Main Page</a>
+<br>
+<a href="/task_3">Task 3</a>
+<br>
+<body>
+<br>
+<br>
+Task 2:
+<br>
+<img src="static/graphs/ESR_plot.jpeg" alt="ERROR" width="500"
+     height="400">
+<br>
+<img src="static/graphs/PER_plot.jpeg" alt="ERROR"width="500"
+     height="400">
+<br>
+<img src="static/graphs/PSR_plot.jpeg" alt="ERROR"width="500"
+     height="400">
+<br>
+<img src="static/graphs/BV_plot.jpeg" alt="ERROR"width="500"
+     height="400">
+<!--{{bp2}}-->
+<br>
+As predicted, boxplots show that there are many values which do not fit in with the general trend. The 'Price_Book_Ratio' boxplot is unclear, due to the existence of extreme data points. These data points will not be used for the stock portfolio, because the existence of extreme values, could be a signal of over-speculation or an unhealthy management type. Therefore, it was decided to filter these data points.
+<br>
+<br>
+Method for filtering: I will be using my median and IQR data to identify boundaries and remove data points above and below the boundary. The formula to identify an outlier will be (Q1-1.5IQR or Q3+1.5IQR). Source: https://www.simplypsychology.org/boxplots.html
+The project will mainly focus on PER(Price_Earnings_Ratio) and BV('Price_Book_Ratio'), as recommended in the book 'The Intelligent Investor', therefore only the outliers for these two parameters will be removed.
+
+<br>
+<br>
+Continued: After filtration my algorithms identified and removed 89 companies, which were considered extreme outliers with respect to the data.
+<br>
+<br>
+<br>
+<br>
+Task 1.1:
+It was decided to observe the changes in the descriptive statistics of the data: {{filtered_df}}
+<br>
+<br>
+From the table it is evident that we have managed to significantly reduce PER and BV StDeviation. This effect can further be observed in the grouped boxplots.
+<br>
+<br>
+<br>
+<br>
+Task 2.1:
+<br>
+<img src="static/graphs/PSR_PBR_plots.jpeg" alt="ERROR"width="500"
+     height="400">
+<br>
+<img src="static/graphs/PER_ESR_plots.jpeg" alt="ERROR"width="500"
+     height="400">
+<br>
+<br>
+Conclusions: By the grouped boxplots, an observation was made that PER behaves similarly to ESR(Earnings_Share_Ratio), on the hand, BV has similar distribution to PSR(Price_Sales_Ratio). This confirms the applicability of just PER and BV for the choice of a stock portfolio. Furthermore, due to the decreased standard deviation, more graphical methods such as the histogram have become available for the overall analysis of the data.
+</body>
+    <br>
+    <br>
+<a href="/">Main Page</a>
+
+</html>

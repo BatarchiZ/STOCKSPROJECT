@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 6*</title>
+</head>
+<a href="/">Main Page</a>
+<br>
+<br>
+<body>
+For the choosing of the stock market porfolio I will consider companies from all sectors excluding the IT and TS. I will generate a list of companies in each sector that is 0.005 standard deviation or less away from the mean, for the PER value. on the other hand due to the skewness of the data in BV, I will consider companies that are 0.005 s.d below the mean and 0.01 s.d above the mean.
+<br>
+<br>
+This is the outcome (list of companies which fit our filters):
+<br>
+{{filter}}
+<br>
+<br>
+This is the sample (changes every time the program is run):
+<br>
+{{sample}}
+<br>
+<br>
+As my sample company with indices (16,6,26,24,29,14,4,5,17) were selected from 'filtered_df_RES'. I have handpicked the Price Values from google, however Libraries such as BS4 can be used to do this automatically.
+<br>
+<br>
+This is the handwritten data table for the initial sample company:
+<br>
+{{resu}}
+<br>
+<br>
+This is the price change for my sampled companies (since July):
+<br>
+{{PC}}
+<br>
+<br>
+This is the price change for the whole of S&P 500 market (since July):
+<br>
+{{PCSP500}}
+<br>
+<br>
+My stocks have achieved a cumulative of 40% increase, compared to 45% increase in the S&P 500 stocks total over the same period. I think this is a relatively satisfactory result, taking into account the fact that no deep human analysis methods were implemented. Furthermore, it is highly likely that the data source is unreliable, because the values it provides does not suit the trends for the 2020 July Period stock prices.
+<br>
+<br>
+The comparison made was with respect to the 2020 July Prices.
+<br>
+<br>
+With dividend payments included:
+<br>
+{{PT}}
+<br>
+<br>
+When the dividend is included, we get a 41% increase compared to 45% in the market. Which is just 4% worse than the market, and a very satisfactory result considering a 100,000$ investment into the stock sample above.
+<br>
+<br>
+A step further was taken to determine the original date, when the stock market measurements were made: By studying the presented stock prices, it is probable that the data dates back to 2017(looking at when companies had the presented stock price).
+
+Now I am going to compare my results against the market growth from 2017.
+<br>
+<br>
+This is the table outlining the percent change of each company (since 2017):
+<br>
+{{resu2}}
+<br>
+<br>
+This is the cumulative percent change since 2017 for my sample:
+<br>
+{{PC2}}
+<br>
+<br>
+This is the cumulative percent change since 2017 for S&P500:
+<br>
+{{finish}}
+<br>
+<br>
+Conclusion:
+<br>
+Through the price of S&P 500 taken at different time periods in 2017, it is highly likely that my algorithm still slightly underperforms the overall market trend. However, this algorithm can be further tuned with more advanced techniques, and the fact that it under-performs just slightly(without taking into account any dividend profits), demonstrates the prospects of Data Science for Investments and creation of a personalised stock market porfolio. Furthermore, I truly believe that with a some human decision-making in the process of choosing and monitoring one's stock market portfolio it is highly likely that the percentage change can be increased. My program thereby provides for a good base of companies that an investor should consider investing in.
+p.s Dividends were not included in the last measurements. If we add 2% over a 4-year period, the result becomes very similar to the market. Of course, more samples have to be taken (maybe it was just a lucky guess or a coincidence...) Nonetheless, companies like Microsoft and Facebook are in my stock-pool. (and they skyrocketed since 2017 ;).
+</body>
+<br>
+<br>
+<a href="/">Main Page</a>
+</html>
