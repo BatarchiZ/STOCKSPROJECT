@@ -2,4 +2,4 @@
 A stockmarket portfolio generating website
 
 The 'old' is the old version.
-The 'project' directory is the final version
+The 'Project' directory is the final version
