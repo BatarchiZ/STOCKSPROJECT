@@ -1,7 +1,7 @@
 from flask import Flask
 import pandas as pd
 
-data = pd.read_csv(r'/Users/iskandersergazin/Desktop/financials.csv')
+data = pd.read_csv('/Users/iskandersergazin/Desktop/HSE Python/STOCKSPROJECT/Project/data/financials.csv')
 
 
 
