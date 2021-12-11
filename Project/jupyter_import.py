@@ -10,7 +10,7 @@ from Project import functions as fn
 # Introduction
 
 
-data = pd.read_csv('/Users/iskandersergazin/Desktop/HSE Python/STOCKSPROJECT/Project/data/financials.csv')
+data = pd.read_csv('./data/financials.csv')
 data = data.rename(columns={'Price/Earnings': 'Price_Earnings_Ratio', 'Earnings/Share': 'Earnings_Share_Ratio',
                             'Dividend Yield': 'Dividend_Yield', '52 Week Low': '52_Week_Low',
                             '52 Week High': '52_Week_High', 'Market Cap': 'Market_Cap',
