@@ -48,9 +48,8 @@ def Task6():
 
 @app.route("/data_intro")
 def Table():
-    # data = HTML(jp.dp_intro.to_html(classes='table table-striped'))
-    return data.head().to_html()
-    # return render_template('data_intro.html', data=data)
+    data = HTML(jp.dp_intro.to_html(classes='table table-striped'))
+    return render_template('data_intro.html', data=data)
 
 @app.route('/task_7')
 def task7():

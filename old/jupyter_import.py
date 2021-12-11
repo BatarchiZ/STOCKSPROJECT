@@ -29,7 +29,7 @@ bp1 = sns.boxplot(data=dp.Earnings_Share_Ratio, orient='h').set(
     xlabel='Ratio',
     ylabel='Companies',
     title='S&P 500 EPS Boxplot')
-plt.savefig('Static/ESR_plot.jpeg')
+plt.savefig('static/ESR_plot.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -38,7 +38,7 @@ bp2 = sns.boxplot(data=dp.Price_Earnings_Ratio, orient='h').set(
     xlabel='Ratio',
     ylabel='Companies',
     title='S&P 500 PER Boxplot')
-plt.savefig('Static/PER_plot.jpeg')
+plt.savefig('static/PER_plot.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -47,7 +47,7 @@ bp3 = sns.boxplot(data=dp.Price_Sales_Ratio, orient='h').set(
     xlabel='Ratio',
     ylabel='Companies',
     title='S&P 500 PSR Boxplot')
-plt.savefig('Static/PSR_plot.jpeg')
+plt.savefig('static/PSR_plot.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -56,7 +56,7 @@ bp4 = sns.boxplot(data=dp.Price_Book_Ratio, orient='h').set(
     xlabel='Ratio',
     ylabel='Companies',
     title='S&P 500 BV Boxplot')
-plt.savefig('Static/BV_plot.jpeg')
+plt.savefig('static/BV_plot.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -108,7 +108,7 @@ sns.boxplot(data=table, x=0, y='name', orient='h').set(
     xlabel='Ratio',
     ylabel='',
     title='S&P 500 PSR and PBR Boxplot')
-plt.savefig('Static/PSR_PBR_plots.jpeg')
+plt.savefig('static/PSR_PBR_plots.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -126,7 +126,7 @@ sns.boxplot(data=table, x=0, y='name', orient='h').set(
     xlabel='Ratio',
     ylabel='',
     title='S&P 500 PER and ESR Boxplot')
-plt.savefig('Static/PER_ESR_plots.jpeg')
+plt.savefig('static/PER_ESR_plots.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -148,7 +148,7 @@ plt.clf()
 #             data = dp4,
 #             kind = "bar").fig.suptitle('PER Distribution by Sector (combined)')
 #
-# plt.savefig('Static/Task3_0_cat.jpeg')
+# plt.savefig('static/Task3_0_cat.jpeg')
 # figfile = io.BytesIO()
 # plt.savefig(figfile, format='jpeg')
 # plt.clf()
@@ -156,14 +156,14 @@ plt.clf()
 # g = sns.catplot(y="Count", x="Range", col="Sector",
 # data=dp4, saturation=.5,
 # kind="bar", ci=None, aspect=.6).fig.suptitle('PER Distributions by Sector')
-# plt.savefig('Static/Task3_0_cat_sect.jpeg')
+# plt.savefig('static/Task3_0_cat_sect.jpeg')
 # figfile = io.BytesIO()
 # plt.savefig(figfile, format='jpeg')
 # plt.clf()
 
 # Task 3 Part 1.1:
 sns.histplot(data=filtered_df, x='Price_Earnings_Ratio', hue='Sector').set_title('PER Histogram by Sector (combined)')
-plt.savefig('Static/Task3_1_hist.jpeg')
+plt.savefig('static/Task3_1_hist.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -180,7 +180,7 @@ for i in set(filtered_df.Sector):
     axis[counter].set_title(i)
     counter += 1
 fig.suptitle('PER Distribution by Sector')
-plt.savefig('Static/Task3_1_hist_sect.jpeg')
+plt.savefig('static/Task3_1_hist_sect.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -195,7 +195,7 @@ for i in set(filtered_df.Sector):
     axis[counter].set_title(i)
     counter += 1
 fig.suptitle('BV Distribution by Sector')
-plt.savefig('Static/Task3_1_hist_BV_sect.jpeg')
+plt.savefig('static/Task3_1_hist_BV_sect.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -209,13 +209,13 @@ dq3 = dq3.drop('Market_Cap', 1).groupby(['Sector'], as_index=True).sum()
 dq3['ValueCounts'] = q3p2
 
 dq3.plot.pie(y='intM_C', figsize=(10, 10)).set_title('S&P500 Market Capitalization Pie Chart (by sector)')
-plt.savefig('Static/Task3_2_pie1.jpeg')
+plt.savefig('static/Task3_2_pie1.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
 
 dq3.plot.pie(y='ValueCounts', figsize=(10, 10)).set_title('S&P500 Number of Companies Pie Chart (by sector)')
-plt.savefig('Static/Task3_2_pie2.jpeg')
+plt.savefig('static/Task3_2_pie2.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()
@@ -228,7 +228,7 @@ dq3['MeanBV'] = filtered_df.groupby('Sector').Price_Book_Ratio.mean().apply(lamb
 corr4 = dq3.corr()
 
 sns.clustermap(dq3, cmap="mako", vmin=0, vmax=10).fig.suptitle('S&P 500 Cluster Map')
-plt.savefig('Static/Task3_cluster.jpeg')
+plt.savefig('static/Task3_cluster.jpeg')
 figfile = io.BytesIO()
 plt.savefig(figfile, format='jpeg')
 plt.clf()

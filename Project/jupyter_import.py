@@ -9,14 +9,13 @@ from Project import functions as fn
 
 # Introduction
 
-url = 'https://github.com/BatarchiZ/STOCKSPROJECT/blob/master/Project/financials.csv'
 data = pd.read_csv('financials.csv')
 data = data.rename(columns={'Price/Earnings': 'Price_Earnings_Ratio', 'Earnings/Share': 'Earnings_Share_Ratio',
                             'Dividend Yield': 'Dividend_Yield', '52 Week Low': '52_Week_Low',
                             '52 Week High': '52_Week_High', 'Market Cap': 'Market_Cap',
                             'Price/Sales': 'Price_Sales_Ratio', 'Price/Book': 'Price_Book_Ratio'})
 dp_intro = data.drop(['SEC Filings', 'EBITDA', '52_Week_Low', '52_Week_High', 'Symbol'], axis=1)
-
+print(dp_intro)
 corr_intro = dp_intro.corr()
 head_intro = dp_intro.head(10)
 tail_intro = dp_intro.tail(20)
