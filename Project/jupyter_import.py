@@ -9,7 +9,7 @@ from Project import functions as fn
 
 # Introduction
 
-
+url = 'https://github.com/BatarchiZ/STOCKSPROJECT/blob/master/Project/financials.csv'
 data = pd.read_csv('financials.csv')
 data = data.rename(columns={'Price/Earnings': 'Price_Earnings_Ratio', 'Earnings/Share': 'Earnings_Share_Ratio',
                             'Dividend Yield': 'Dividend_Yield', '52 Week Low': '52_Week_Low',
