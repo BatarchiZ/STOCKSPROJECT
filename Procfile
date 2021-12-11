@@ -1,1 +1,1 @@
-web: gunicorn Project:app
+web: gunicorn Project:run
